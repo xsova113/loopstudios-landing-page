@@ -30,7 +30,7 @@ const Creation = () => {
         variants={fadeIn("bottom", "spring", 0.3, 0.5)}
         initial="hidden"
         whileInView="show"
-        className="sm:grid grid-cols-4 sm:mb-0 mb-8"
+        className="sm:flex sm:flex-wrap sm:gap-[70px] sm:justify-center grid-cols-4 sm:mb-0 mb-8"
       >
         {creations.map((item) => (
           <div key={item.title} className="group cursor-pointer">
