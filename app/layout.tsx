@@ -1,4 +1,4 @@
-import Footer from "./components/Footer";
+import { Header, Footer } from "./components";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -21,8 +21,12 @@ export default function RootLayout({
         type="image/png"
         sizes="32x32"
         href="/images/favicon.png"
-      ></link>
-      <body className={inter.className}>{children}</body>
+      />
+      <body className={inter.className}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

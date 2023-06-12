@@ -1,7 +1,8 @@
+"use client";
 import Image from "next/image";
 import { creations } from "../data/creations";
 import { motion } from "framer-motion";
-import { fadeIn, slideIn, zoomIn } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 
 const Creation = () => {
   return (
@@ -32,7 +33,7 @@ const Creation = () => {
         whileInView="show"
         className="sm:flex sm:flex-wrap sm:gap-[70px] sm:justify-center grid-cols-4 sm:mb-0 mb-8"
       >
-        {creations.map((item) => (
+        {creations.map((item, index) => (
           <div key={item.title} className="group cursor-pointer">
             <Image
               src={item.desktop}
@@ -49,7 +50,9 @@ const Creation = () => {
               className="min-w-full sm:hidden group group-hover:opacity-40 transition"
             />
             <h1
-              className={`relative text-white sm:text-lg md:text-xl font-light text-md leading-4 md:leading-2 sm:bottom-[70px] bottom-[40px] left-5 sm:left-3 max-w-[90px] -mb-5 group-hover:text-black transition-all 
+              className={`relative text-white sm:text-lg md:text-xl font-light text-md leading-4 md:leading-2 sm:bottom-[70px] bottom-[40px] left-5 sm:left-3 max-w-[90px] ${
+                index === 4 && "max-w-[100px]"
+              } -mb-5 group-hover:text-black transition-all 
               sm:${item.title === "The grid" && "max-w-[80px]"} 
               ${item.title === "The grid" && "max-w-[40px]"}
               sm:${item.title === "From up above VR" && "min-w-[120px]"}`}

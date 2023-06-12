@@ -72,7 +72,7 @@ const NavBar: React.FC<NavBarProps> = ({ isOpen, setIsOpen }) => {
 
       {isOpen && (
         <motion.div
-          variants={slideIn("left", "spring", 0.2, 0.5)}
+          variants={slideIn("left", "spring", 0.3, 0.5)}
           initial="hidden"
           whileInView={"show"}
           className="sm:hidden text-white gap-5 pt-[150px] pr-[50px] flex flex-col sm:right-0 sm:flex-row md:gap-8 sm:gap-3 transition-all"

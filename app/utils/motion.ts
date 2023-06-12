@@ -29,7 +29,7 @@ export const textVariant = (delay: number) => ({
     opacity: 1,
     transition: {
       type: "spring",
-      duration: 1.25,
+      duration: 1,
       delay,
     },
   },
@@ -112,7 +112,7 @@ export const footerVariants = {
     transition: {
       type: "spring",
       stiffness: 80,
-      delay: 0.5,
+      delay: 0.3,
     },
   },
 };
