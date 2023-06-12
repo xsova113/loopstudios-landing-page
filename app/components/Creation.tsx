@@ -40,18 +40,18 @@ const Creation = () => {
               alt="images"
               height={200}
               width={80}
-              className="h-auto w-[230px] hidden sm:block group group-hover:opacity-40 transition"
+              className="h-auto w-[230px] hover:scale-110 hidden sm:block group group-hover:opacity-40 transition"
             />
             <Image
               src={item.mobile}
               alt="images"
               height={800}
               width={800}
-              className="min-w-full sm:hidden group group-hover:opacity-40 transition"
+              className="min-w-full sm:hidden hover:scale-110 group group-hover:opacity-40 transition"
             />
             <h1
-              className={`relative text-white sm:text-lg md:text-xl font-light text-md leading-4 md:leading-2 sm:bottom-[70px] bottom-[40px] left-5 sm:left-3 max-w-[90px] ${
-                index === 4 && "max-w-[100px]"
+              className={`relative text-white sm:text-lg md:text-xl font-light text-md leading-4 md:leading-2 sm:bottom-[70px] bottom-[45px] left-5 sm:left-3 ${
+                index === 4 ? "sm:max-w-[130px] max-w-[100px]" : "sm:max-w-[90px] max-w-[70px]"
               } -mb-5 group-hover:text-black transition-all 
               sm:${item.title === "The grid" && "max-w-[80px]"} 
               ${item.title === "The grid" && "max-w-[40px]"}
